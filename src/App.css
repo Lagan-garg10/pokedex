@@ -1,0 +1,71 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.underlineLine {
+    transition: 0.5s ease-in-out;
+}
+
+.underlineLine:nth-child(1) {
+    transition: calc(0.5s * 0.8) ease-in-out;
+}
+
+.underlineLine:nth-child(2) {
+    transition: calc(0.5s * 1.2) ease-in-out;
+}
+
+::-webkit-scrollbar {
+    background-color: transparent;
+    width: 0.4rem;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(219, 219, 219, 0.557);
+}
+
+.active {
+    background-color: var(--accent-color);
+}
+
+progress {
+    transition: 2s ease-in-out;
+    width: 0;
+    height: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+::-webkit-progress-bar {
+    border-radius: 1rem;
+    height: 0.3rem;
+    background-color: transparent;
+}
+
+::-webkit-progress-value {
+    border-radius: 1rem;
+    background-color: var(--accent-color);
+}
+
+.battle-stats::before{
+    background-color: var(--accent-color);
+    content: "";
+    height: .3rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 9rem;
+}
+
+.description::before{
+    background-color: var(--accent-color);
+    content: "";
+    height: .3rem;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 9rem;
+}
+
+:root{
+    --accent-color: rgb(152,255,152);
+}
